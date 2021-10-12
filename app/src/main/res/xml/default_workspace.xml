@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidges xmlns:launcher="http://schemas.android.com/apk/res-auto">
+<!--    <default launcher:screen="1" />-->
+<!--    <weatherclock launcher:screen="1" launcher:index="0" />-->
+<!--    <appwidget-->
+<!--        launcher:screen="1"-->
+<!--        launcher:index="1"-->
+<!--        launcher:title="电话"-->
+<!--        launcher:icon="@drawable/ic_phone"-->
+<!--        launcher:background="#60a917"-->
+<!--        launcher:packageName=""-->
+<!--        launcher:className="" />-->
+<!--    <appwidget-->
+<!--        launcher:screen="1"-->
+<!--        launcher:index="2"-->
+<!--        launcher:title="短信"-->
+<!--        launcher:icon="@drawable/ic_mms"-->
+<!--        launcher:background="#fa6800"-->
+<!--        launcher:packageName=""-->
+<!--        launcher:className="" />-->
+<!--    <appwidget-->
+<!--        launcher:screen="1"-->
+<!--        launcher:index="3"-->
+<!--        launcher:title="相册"-->
+<!--        launcher:icon="@drawable/ic_gallery"-->
+<!--        launcher:background="#aa00ff"-->
+<!--        launcher:packageName=""-->
+<!--        launcher:className="" />-->
+<!--    <appwidget-->
+<!--        launcher:screen="1"-->
+<!--        launcher:index="4"-->
+<!--        launcher:title="拍照"-->
+<!--        launcher:icon="@drawable/ic_camera"-->
+<!--        launcher:background="#1ba1e2"-->
+<!--        launcher:packageName=""-->
+<!--        launcher:className="" />-->
+</appwidges>

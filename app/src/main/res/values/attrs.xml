@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Shortcut">
+        <attr name="launcher_className" format="string" />
+        <attr name="launcher_packageName" format="string" />
+        <attr name="launcher_screen" format="string" />
+        <attr name="launcher_x" format="string" />
+        <attr name="launcher_y" format="string" />
+        <attr name="launcher_spanX" format="string" />
+        <attr name="launcher_spanY" format="string" />
+        <attr name="launcher_icon" format="reference" />
+        <attr name="launcher_title" format="reference" />
+        <attr name="launcher_uri" format="string" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="workspace_max_gap">16dp</dimen>
+
+    <bool name="config_workspaceFadeAdjacentScreens">false</bool>
+    <integer name="config_workspaceSpringLoadShrinkPercentage">80</integer>
+    <integer name="config_cameraDistance">6500</integer>
+
+    <integer name="config_appsCustomizeSpringLoadedBgAlpha">45</integer>
+    <integer name="config_workspaceUnshrinkTime">300</integer>
+    <integer name="config_appsCustomizeWorkspaceShrinkTime">300</integer>
+
+    <dimen name="workspace_spring_loaded_page_spacing">15dp</dimen>
+    <string name="workspace_description_format">Home screen %1$d</string>
+    <string name="workspace_scroll_format">Home screen %1$d of %2$d</string>
+
+    <!-- Workspace padding -->
+<!--    <dimen name="workspace_left_padding_port">0dp</dimen>-->
+<!--    <dimen name="workspace_left_padding_land">@dimen/qsb_bar_height</dimen>-->
+<!--    <dimen name="workspace_right_padding_port">0dp</dimen>-->
+<!--    <dimen name="workspace_right_padding_land">@dimen/button_bar_height</dimen>-->
+<!--    <dimen name="workspace_top_padding_port">@dimen/qsb_bar_height_inset</dimen>-->
+<!--    <dimen name="workspace_top_padding_land">0dp</dimen>-->
+<!--    <dimen name="workspace_bottom_padding_port">@dimen/button_bar_height</dimen>-->
+<!--    <dimen name="workspace_bottom_padding_land">0dp</dimen>-->
+
+    <!-- Workspace cell size -->
+    <dimen name="workspace_cell_width_land">106dp</dimen>
+    <dimen name="workspace_cell_width_port">80dp</dimen>
+    <dimen name="workspace_cell_height_land">74dp</dimen>
+    <dimen name="workspace_cell_height_port">100dp</dimen>
+    <dimen name="workspace_width_gap_land">0dp</dimen>
+    <dimen name="workspace_width_gap_port">0dp</dimen>
+    <dimen name="workspace_height_gap_land">0dp</dimen>
+    <dimen name="workspace_height_gap_port">0dp</dimen>
+
+    <dimen name="cell_layout_left_padding_port">0dp</dimen>
+    <dimen name="cell_layout_left_padding_land">0dp</dimen>
+    <dimen name="cell_layout_right_padding_port">0dp</dimen>
+    <dimen name="cell_layout_right_padding_land">0dp</dimen>
+    <dimen name="cell_layout_top_padding_port">6dp</dimen>
+    <dimen name="cell_layout_top_padding_land">0dp</dimen>
+    <dimen name="cell_layout_bottom_padding_port">0dp</dimen>
+    <dimen name="cell_layout_bottom_padding_land">0dp</dimen>
+
+    <string name="default_scroll_format">Page %1$d of %2$d</string>
+
+    <declare-styleable name="Workspace">
+        <attr name="defaultScreen" format="integer"  />
+<!--        <attr name="cellCountX" format="integer"  />-->
+<!--        <attr name="cellCountY" format="integer"  />-->
+    </declare-styleable>
+
+    <declare-styleable name="CellLayout">
+        <attr name="cellCountX" format="integer"  />
+        <attr name="cellCountY" format="integer"  />
+        <attr name="widthGap" format="dimension" />
+        <attr name="heightGap" format="dimension" />
+        <attr name="maxGap" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="PagedView">
+        <attr name="pageLayoutWidthGap" format="dimension" />
+        <attr name="pageLayoutHeightGap" format="dimension" />
+        <attr name="pageLayoutPaddingTop" format="dimension" />
+        <attr name="pageLayoutPaddingBottom" format="dimension" />
+        <attr name="pageLayoutPaddingLeft" format="dimension" />
+        <attr name="pageLayoutPaddingRight" format="dimension" />
+        <attr name="pageSpacing" format="dimension" />
+        <attr name="scrollIndicatorPaddingLeft" format="dimension" />
+        <attr name="scrollIndicatorPaddingRight" format="dimension" />
+    </declare-styleable>
+</resources>
