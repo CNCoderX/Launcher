@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cncoderx.launcher.module.workspace;
+package com.cncoderx.launcher;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -41,8 +41,6 @@ import android.view.accessibility.AccessibilityManager;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
-
-import com.cncoderx.launcher.R;
 
 import java.util.ArrayList;
 

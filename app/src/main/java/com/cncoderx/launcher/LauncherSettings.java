@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cncoderx.launcher.module.workspace;
+package com.cncoderx.launcher;
 
 import android.net.Uri;
 import android.provider.BaseColumns;
@@ -94,46 +94,34 @@ class LauncherSettings {
      * Shortcuts.
      */
     static final class Shortcuts implements BaseLauncherColumns {
-//        /**
-//         * The content:// style URL for this table
-//         */
-//        static final Uri CONTENT_URI = Uri.parse("content://" +
-//                LauncherProvider.AUTHORITY + "/" + LauncherProvider.TABLE_FAVORITES +
-//                "?" + LauncherProvider.PARAMETER_NOTIFY + "=true");
-//
-//        /**
-//         * The content:// style URL for this table. When this Uri is used, no notification is
-//         * sent if the content changes.
-//         */
-//        static final Uri CONTENT_URI_NO_NOTIFICATION = Uri.parse("content://" +
-//                LauncherProvider.AUTHORITY + "/" + LauncherProvider.TABLE_FAVORITES +
-//                "?" + LauncherProvider.PARAMETER_NOTIFY + "=false");
-//
-//        /**
-//         * The content:// style URL for a given row, identified by its id.
-//         *
-//         * @param id The row id.
-//         * @param notify True to send a notification is the content changes.
-//         *
-//         * @return The unique content URL for the specified row.
-//         */
-//        static Uri getContentUri(long id, boolean notify) {
-//            return Uri.parse("content://" + LauncherProvider.AUTHORITY +
-//                    "/" + LauncherProvider.TABLE_FAVORITES + "/" + id + "?" +
-//                    LauncherProvider.PARAMETER_NOTIFY + "=" + notify);
-//        }
+        /**
+         * The content:// style URL for this table
+         */
+        static final Uri CONTENT_URI = Uri.parse("content://" +
+                LauncherProvider.AUTHORITY + "/" + LauncherProvider.TABLE_SHORTCUTS +
+                "?" + LauncherProvider.PARAMETER_NOTIFY + "=true");
 
-//        /**
-//         * The container holding the favorite
-//         * <P>Type: INTEGER</P>
-//         */
-//        static final String CONTAINER = "container";
-//
-//        /**
-//         * The icon is a resource identified by a package name and an integer id.
-//         */
-//        static final int CONTAINER_DESKTOP = -100;
-//        static final int CONTAINER_HOTSEAT = -101;
+        /**
+         * The content:// style URL for this table. When this Uri is used, no notification is
+         * sent if the content changes.
+         */
+        static final Uri CONTENT_URI_NO_NOTIFICATION = Uri.parse("content://" +
+                LauncherProvider.AUTHORITY + "/" + LauncherProvider.TABLE_SHORTCUTS +
+                "?" + LauncherProvider.PARAMETER_NOTIFY + "=false");
+
+        /**
+         * The content:// style URL for a given row, identified by its id.
+         *
+         * @param id The row id.
+         * @param notify True to send a notification is the content changes.
+         *
+         * @return The unique content URL for the specified row.
+         */
+        static Uri getContentUri(long id, boolean notify) {
+            return Uri.parse("content://" + LauncherProvider.AUTHORITY +
+                    "/" + LauncherProvider.TABLE_SHORTCUTS + "/" + id + "?" +
+                    LauncherProvider.PARAMETER_NOTIFY + "=" + notify);
+        }
 
         /**
          * The screen holding the favorite (if container is CONTAINER_DESKTOP)
@@ -176,11 +164,6 @@ class LauncherSettings {
         static final String PROFILE_ID = "profileId";
 
         /**
-         * The favorite is a user created folder
-         */
-        static final int ITEM_TYPE_FOLDER = 2;
-
-        /**
         * The favorite is a live folder
         *
         * Note: live folders can no longer be added to Launcher, and any live folders which
@@ -208,13 +191,6 @@ class LauncherSettings {
          * The favorite is a photo frame
          */
         static final int ITEM_TYPE_WIDGET_PHOTO_FRAME = 1002;
-
-        /**
-         * The appWidgetId of the widget
-         *
-         * <P>Type: INTEGER</P>
-         */
-        static final String APPWIDGET_ID = "appWidgetId";
 
         /**
          * Indicates whether this favorite is an application-created shortcut or not.

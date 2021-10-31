@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".module.workspace.Launcher">
+        <activity android:name=".Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

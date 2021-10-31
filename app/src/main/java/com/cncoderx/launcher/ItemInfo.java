@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cncoderx.launcher.module.workspace;
+package com.cncoderx.launcher;
 
 import android.content.ContentValues;
 import android.content.Context;

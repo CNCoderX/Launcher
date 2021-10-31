@@ -1,4 +1,4 @@
-package com.cncoderx.launcher.module.workspace;
+package com.cncoderx.launcher;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -18,8 +18,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.LayoutAnimationController;
-
-import com.cncoderx.launcher.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

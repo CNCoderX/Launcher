@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cncoderx.launcher.module.workspace;
+package com.cncoderx.launcher;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -23,43 +23,23 @@ import android.animation.TimeInterpolator;
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.app.WallpaperManager;
-import android.appwidget.AppWidgetHostView;
-import android.appwidget.AppWidgetProviderInfo;
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Matrix;
-import android.graphics.Point;
-import android.graphics.PointF;
 import android.graphics.Rect;
-import android.graphics.Region.Op;
 import android.graphics.drawable.Drawable;
 import android.os.IBinder;
 import android.os.Parcelable;
-import android.os.UserHandle;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.SparseArray;
-import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.cncoderx.launcher.R;
-
-import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 
 /**
  * The workspace is a wide area with a wallpaper and a finite number of pages.
@@ -488,8 +468,8 @@ public class Workspace extends SmoothPagedView
      * @param spanX The number of cells spanned horizontally by the child.
      * @param spanY The number of cells spanned vertically by the child.
      */
-    void addInScreen(View child, long container, int screen, int x, int y, int spanX, int spanY) {
-        addInScreen(child, container, screen, x, y, spanX, spanY, false);
+    void addInScreen(View child, int screen, int x, int y, int spanX, int spanY) {
+        addInScreen(child, screen, x, y, spanX, spanY, false);
     }
 
     /**
@@ -504,7 +484,7 @@ public class Workspace extends SmoothPagedView
      * @param spanY The number of cells spanned vertically by the child.
      * @param insert When true, the child is inserted at the beginning of the children list.
      */
-    void addInScreen(View child, long container, int screen, int x, int y, int spanX, int spanY,
+    void addInScreen(View child, int screen, int x, int y, int spanX, int spanY,
             boolean insert) {
         if (screen < 0 || screen >= getChildCount()) {
             Log.e(TAG, "The screen must be >= 0 and < " + getChildCount()
@@ -532,7 +512,7 @@ public class Workspace extends SmoothPagedView
         }
 
         // Get the canonical child id to uniquely represent this view in this screen
-        int childId = getCellLayoutChildId(container, screen, x, y, spanX, spanY);
+        int childId = getCellLayoutChildId(screen, x, y, spanX, spanY);
         if (!layout.addViewToCellLayout(child, insert ? 0 : -1, childId, lp, true)) {
             // TODO: This branch occurs when the workspace is adding views
             // outside of the defined grid
@@ -551,9 +531,8 @@ public class Workspace extends SmoothPagedView
     /**
      * Creates a new unique child id, for a given cell span across all layouts.
      */
-    static int getCellLayoutChildId(
-        long container, int screen, int localCellX, int localCellY, int spanX, int spanY) {
-        return (((int) container & 0xFF) << 24) | (screen & 0xFF) << 16 | (localCellX & 0xFF) << 8 | (localCellY & 0xFF);
+    static int getCellLayoutChildId(int screen, int localCellX, int localCellY, int spanX, int spanY) {
+        return (screen & 0xFF) << 16 | (localCellX & 0xFF) << 8 | (localCellY & 0xFF);
     }
 
 //        /**

@@ -1,4 +1,4 @@
-package com.cncoderx.launcher.module.workspace;
+package com.cncoderx.launcher;
 
 import android.view.View;
 

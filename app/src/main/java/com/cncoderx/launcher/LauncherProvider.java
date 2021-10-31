@@ -1,4 +1,4 @@
-package com.cncoderx.launcher.module.workspace;
+package com.cncoderx.launcher;
 
 import android.content.ComponentName;
 import android.content.ContentProvider;
@@ -22,9 +22,6 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.Xml;
-
-import com.cncoderx.launcher.LauncherApplication;
-import com.cncoderx.launcher.R;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
